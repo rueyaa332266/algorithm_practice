@@ -5,9 +5,6 @@ import "fmt"
 func minIndex(in []int) int {
 	mini := 0
 	for i := range in {
-		if i+1 == len(in) {
-			break
-		}
 		if in[i] < in[mini] {
 			mini = i
 		}
