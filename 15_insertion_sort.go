@@ -2,7 +2,13 @@ package main
 
 import "fmt"
 
-// Insert is the last element
+func insertion_sort(slice []int) []int {
+	for i := 0; i < len(slice)-1; i++ {
+		slice = insertion(slice, i+1)
+	}
+	return slice
+}
+
 func insertion(slice []int, i int) []int {
 	last := i - 1
 	tmp := slice[last+1]
@@ -21,6 +27,6 @@ func insertion(slice []int, i int) []int {
 }
 
 func main() {
-	list := []int{10, 50, 20, 60, 100, 8}
-	fmt.Println(insertion(list, 5))
+	list := []int{1, 9, 12, 5, 4, 10, 6, 8}
+	fmt.Println(insertion_sort(list))
 }
