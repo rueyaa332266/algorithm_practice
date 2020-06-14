@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func bubble_sort(slice []int) []int {
+func bubbleSort(slice []int) []int {
 	left := 0
 	right := len(slice) - 1
 	for i := left; i < right; i++ {
@@ -24,5 +24,5 @@ func swap(a int, b int) (int, int) {
 
 func main() {
 	list := []int{1, 9, 12, 5, 4, 10, 6, 8}
-	fmt.Println(bubble_sort(list))
+	fmt.Println(bubbleSort(list))
 }

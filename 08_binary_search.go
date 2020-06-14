@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 // return target index or -1(not found)
-func binary_search(in []int, target int) int {
+func binarySearch(in []int, target int) int {
 	left := 0
 	right := len(in) - 1
 	for left < right {
@@ -33,5 +33,5 @@ func binary_search(in []int, target int) int {
 
 func main() {
 	list := []int{1, 2, 3, 4, 5, 6, 7, 8}
-	fmt.Println(binary_search(list, 6))
+	fmt.Println(binarySearch(list, 6))
 }

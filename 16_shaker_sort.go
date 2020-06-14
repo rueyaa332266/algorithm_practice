@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func shaker_sort(slice []int) []int {
+func shakerSort(slice []int) []int {
 	left := 0
 	right := len(slice) - 1
 	for {
@@ -43,5 +43,5 @@ func swap(a int, b int) (int, int) {
 
 func main() {
 	list := []int{3, 1, 2, 12, 10, 5, 7, 4, 9, 11}
-	fmt.Println(shaker_sort(list))
+	fmt.Println(shakerSort(list))
 }

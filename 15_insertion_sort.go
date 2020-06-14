@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func insertion_sort(slice []int) []int {
+func insertionSort(slice []int) []int {
 	for i := 0; i < len(slice)-1; i++ {
 		slice = insertion(slice, i+1)
 	}
@@ -28,5 +28,5 @@ func insertion(slice []int, i int) []int {
 
 func main() {
 	list := []int{1, 9, 12, 5, 4, 10, 6, 8}
-	fmt.Println(insertion_sort(list))
+	fmt.Println(insertionSort(list))
 }

@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func selection_sort(slice []int) []int {
+func selectionSort(slice []int) []int {
 	for i := 0; i < len(slice)-1; i++ {
 		index := minIndex(slice[i+1:])
 		if slice[i] > slice[i+index+1] {
@@ -31,5 +31,5 @@ func swap(a int, b int) (int, int) {
 
 func main() {
 	list := []int{1, 9, 12, 5, 4, 10, 6, 8}
-	fmt.Println(selection_sort(list))
+	fmt.Println(selectionSort(list))
 }
