@@ -13,9 +13,7 @@ func accumulation1d(in []int, set []segment) []int {
 	for _, v := range set {
 		in[v.left] = in[v.left] + 1
 		in[v.right] = in[v.right] - 1
-		fmt.Println(in)
 	}
-	fmt.Println(in)
 	for i := 1; i <= (len(in) - 1); i++ {
 		in[i] = in[i] + in[i-1]
 	}
