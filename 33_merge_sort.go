@@ -2,6 +2,16 @@ package main
 
 import "fmt"
 
+func mergeSort(slice []int, l int, r int) []int {
+	if l < r-1 {
+		m := (l + r) / 2
+		mergeSort(slice, l, m)
+		mergeSort(slice, m, r)
+		merge(slice, l, m, r)
+	}
+	return slice
+}
+
 func merge(slice []int, l int, m int, r int) []int {
 	var mergeSlice []int
 	tmp := append(slice[l:m], reverse(slice[m:r])...)
@@ -17,7 +27,6 @@ func merge(slice []int, l int, m int, r int) []int {
 			right = right - 1
 		}
 	}
-
 	for i := range slice[l:r] {
 		slice[l:r][i] = mergeSlice[i]
 	}
@@ -41,6 +50,6 @@ func swap(a int, b int) (int, int) {
 }
 
 func main() {
-	list := []int{17, 22, 39, 44, 53, 68, 76, 2, 45, 53, 64, 79, 88}
-	fmt.Println(merge(list, 1, 6, 13))
+	list := []int{5, 1, 11, 2, 4, 9, 12, 3}
+	fmt.Println(mergeSort(list, 0, 8))
 }
