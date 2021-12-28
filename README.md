@@ -1,2 +1,2 @@
-Implement the algorthm in this site for practice.
+Implement the algorithm in this site for practice.
 https://yutaka-watanobe.github.io/star-aida/books/
